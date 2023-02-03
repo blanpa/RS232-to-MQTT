@@ -1,0 +1,162 @@
+[
+    {
+        "id": "1a6a293ea8750076",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b6c8d41587f98e9e",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "localhost",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "root",
+        "userFieldType": "str",
+        "password": "root",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "27b9e98b4d3a90e4",
+        "type": "mqtt out",
+        "z": "1a6a293ea8750076",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "x": 770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c362acb59c972527",
+        "type": "mqtt out",
+        "z": "1a6a293ea8750076",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4f7e8ce485a6d20e",
+        "type": "debug",
+        "z": "1a6a293ea8750076",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "70b1ad1960e37f17",
+        "type": "inject",
+        "z": "1a6a293ea8750076",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "381f76f267ef52a5",
+        "type": "status",
+        "z": "1a6a293ea8750076",
+        "name": "",
+        "scope": null,
+        "x": 260,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e51e4a49dfe4048",
+        "type": "postgresql",
+        "z": "1a6a293ea8750076",
+        "name": "local",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "b6c8d41587f98e9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 670,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9011c2a3e0374928",
+        "type": "serial in",
+        "z": "1a6a293ea8750076",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "4f7e8ce485a6d20e"
+            ]
+        ]
+    },
+    {
+        "id": "28aa31a156fa345c",
+        "type": "serial request",
+        "z": "1a6a293ea8750076",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    }
+]

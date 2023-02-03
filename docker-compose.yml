@@ -1,0 +1,53 @@
+################################################################################
+# RS232-to-MQTT
+################################################################################
+# Test
+# Blanpa
+################################################################################
+version: '3.3'
+services:
+    node-red:
+        ports:
+            - '1880:1880'
+        volumes:
+            - ./node-red:/data
+        container_name: mynodered
+        restart: always
+        #network_mode: host
+        privileged: true
+        image: 'nodered/node-red:latest'
+
+    portainer-ce:
+        ports:
+            - '8000:8000'
+            - '9443:9443'
+        container_name: portainer
+        restart: always
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - 'portainer_data:/data'
+        image: 'portainer/portainer-ce:latest'
+
+    postgres:
+        image: postgres:13
+        environment:
+          - POSTGRES_USER=root
+          - POSTGRES_PASSWORD=root
+          - POSTGRES_DB=postgres
+        volumes:
+          - "./postgres:/var/lib/postgresql/data:rw"
+        ports:  
+          - "5432:5432"
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+          - 8080:8080
+
+volumes:
+  # node_red_data:
+  #   external: false
+  postgres:
+    external: false
+  portainer_data:
+    external: false

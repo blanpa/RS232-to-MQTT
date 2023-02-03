@@ -1,0 +1,7 @@
+postgresdata
+postgres
+node_modules
+node-red/.config.json
+node-red/.sessions.json
+node-red/*json.backup
+node-red/**/*_cred.json
