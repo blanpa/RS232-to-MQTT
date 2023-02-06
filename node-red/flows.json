@@ -1,6 +1,6 @@
 [
     {
-        "id": "1a6a293ea8750076",
+        "id": "d75ec33adae19baa",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -33,11 +33,163 @@
         "passwordFieldType": "str"
     },
     {
-        "id": "27b9e98b4d3a90e4",
+        "id": "a17029a4eb598507",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB4/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "2000"
+    },
+    {
+        "id": "00f46cd2d784d495",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB2/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "2000"
+    },
+    {
+        "id": "c6cf9d6dcd06dcf5",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB3",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "c27d94bda4db3755",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB2/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4d605e39cab675b9",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB3/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "2000"
+    },
+    {
+        "id": "fcc1443563760172",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB6/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "2000"
+    },
+    {
+        "id": "56f060a80c19b466",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB1/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "2000"
+    },
+    {
+        "id": "8f24edc78b20860c",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0/",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "2000"
+    },
+    {
+        "id": "891387ab6602d92d",
         "type": "mqtt out",
-        "z": "1a6a293ea8750076",
+        "z": "d75ec33adae19baa",
         "name": "",
-        "topic": "",
+        "topic": "/dev/ttyUSB0/",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -45,16 +197,17 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "x": 770,
-        "y": 160,
+        "broker": "",
+        "x": 1400,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "c362acb59c972527",
+        "id": "27ce1d4243f9afea",
         "type": "mqtt out",
-        "z": "1a6a293ea8750076",
+        "z": "d75ec33adae19baa",
         "name": "",
-        "topic": "",
+        "topic": "/dev/ttyUSB1/",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -62,30 +215,32 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "x": 770,
-        "y": 220,
+        "broker": "",
+        "x": 1400,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "4f7e8ce485a6d20e",
+        "id": "3fa1a282d566dc73",
         "type": "debug",
-        "z": "1a6a293ea8750076",
+        "z": "d75ec33adae19baa",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 520,
-        "y": 280,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "70b1ad1960e37f17",
+        "id": "ac70139621bb6196",
         "type": "inject",
-        "z": "1a6a293ea8750076",
+        "z": "d75ec33adae19baa",
         "name": "",
         "props": [
             {
@@ -96,67 +251,459 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "test",
         "payload": "",
         "payloadType": "date",
-        "x": 260,
-        "y": 80,
+        "x": 220,
+        "y": 500,
         "wires": [
-            []
+            [
+                "e006e4636e35c22f"
+            ]
         ]
     },
     {
-        "id": "381f76f267ef52a5",
-        "type": "status",
-        "z": "1a6a293ea8750076",
-        "name": "",
-        "scope": null,
-        "x": 260,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0e51e4a49dfe4048",
+        "id": "632ba8561a9f4655",
         "type": "postgresql",
-        "z": "1a6a293ea8750076",
+        "z": "d75ec33adae19baa",
         "name": "local",
         "query": "SELECT * FROM ;",
         "postgreSQLConfig": "b6c8d41587f98e9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 670,
-        "y": 80,
+        "x": 1370,
+        "y": 380,
         "wires": [
             []
         ]
     },
     {
-        "id": "9011c2a3e0374928",
-        "type": "serial in",
-        "z": "1a6a293ea8750076",
-        "x": 190,
-        "y": 200,
+        "id": "9bba7b15040c726c",
+        "type": "serial request",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "8f24edc78b20860c",
+        "x": 640,
+        "y": 640,
         "wires": [
             [
-                "4f7e8ce485a6d20e"
+                "83b6401eef7c5b92"
             ]
         ]
     },
     {
-        "id": "28aa31a156fa345c",
+        "id": "ba3e96ea04319b23",
         "type": "serial request",
-        "z": "1a6a293ea8750076",
-        "x": 190,
-        "y": 240,
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "56f060a80c19b466",
+        "x": 640,
+        "y": 680,
+        "wires": [
+            [
+                "8adbba5ea7b1113a"
+            ]
+        ]
+    },
+    {
+        "id": "b9a96e30a9c45b42",
+        "type": "serial request",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "00f46cd2d784d495",
+        "x": 640,
+        "y": 720,
+        "wires": [
+            [
+                "468f5f2d73b3d6ab"
+            ]
+        ]
+    },
+    {
+        "id": "5a2d4bb631dfb0ab",
+        "type": "serial request",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "4d605e39cab675b9",
+        "x": 640,
+        "y": 760,
+        "wires": [
+            [
+                "0a116c5151a562f8"
+            ]
+        ]
+    },
+    {
+        "id": "cd09b0ce988bc599",
+        "type": "serial request",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "a17029a4eb598507",
+        "x": 640,
+        "y": 800,
+        "wires": [
+            [
+                "23d3055cb5100fd3"
+            ]
+        ]
+    },
+    {
+        "id": "65a0bdc385127b83",
+        "type": "serial request",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "fcc1443563760172",
+        "x": 640,
+        "y": 840,
+        "wires": [
+            [
+                "04029c1603868baf"
+            ]
+        ]
+    },
+    {
+        "id": "e006e4636e35c22f",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 1",
+        "func": "\n\nvar partCounter = \"RF8 S\\r\\n\";\nvar serialNumber = \"RF51\\r\\n\";\nvar deviceType = \"RF59\\r\\n\";\nvar speed = \"RF20\\r\\n\";\nvar force = \"RF21\\r\\n\";\nvar temperature = \"RF22\\r\\n\";\n\nvar test = \"test\";\nmsg = test;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 500,
+        "wires": [
+            [
+                "9bba7b15040c726c",
+                "ba3e96ea04319b23",
+                "b9a96e30a9c45b42",
+                "5a2d4bb631dfb0ab",
+                "cd09b0ce988bc599",
+                "65a0bdc385127b83",
+                "3fa1a282d566dc73",
+                "83b6401eef7c5b92",
+                "8adbba5ea7b1113a",
+                "468f5f2d73b3d6ab",
+                "0a116c5151a562f8",
+                "23d3055cb5100fd3",
+                "04029c1603868baf",
+                "3a6b92b262d28fe6"
+            ]
+        ]
+    },
+    {
+        "id": "0dbc3c7f92576450",
+        "type": "debug",
+        "z": "d75ec33adae19baa",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "83b6401eef7c5b92",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 400,
+        "wires": [
+            [
+                "891387ab6602d92d",
+                "0dbc3c7f92576450",
+                "632ba8561a9f4655"
+            ]
+        ]
+    },
+    {
+        "id": "8adbba5ea7b1113a",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 440,
+        "wires": [
+            [
+                "27ce1d4243f9afea",
+                "632ba8561a9f4655"
+            ]
+        ]
+    },
+    {
+        "id": "468f5f2d73b3d6ab",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 4",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "cd07ef4d76ba565e",
+                "632ba8561a9f4655"
+            ]
+        ]
+    },
+    {
+        "id": "0a116c5151a562f8",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 5",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "0a7e536102930371",
+                "632ba8561a9f4655"
+            ]
+        ]
+    },
+    {
+        "id": "23d3055cb5100fd3",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 6",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "062e402a23fcaedc",
+                "632ba8561a9f4655"
+            ]
+        ]
+    },
+    {
+        "id": "04029c1603868baf",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 7",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 600,
+        "wires": [
+            [
+                "ff8f87b1a9222f48",
+                "632ba8561a9f4655"
+            ]
+        ]
+    },
+    {
+        "id": "cd07ef4d76ba565e",
+        "type": "mqtt out",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "topic": "/dev/ttyUSB2/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 1400,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "0a7e536102930371",
+        "type": "mqtt out",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "topic": "/dev/ttyUSB3/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 1400,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "062e402a23fcaedc",
+        "type": "mqtt out",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "topic": "/dev/ttyUSB4/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 1400,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ff8f87b1a9222f48",
+        "type": "mqtt out",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "topic": "/dev/ttyUSB5/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 1400,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "e79d73fd1a25616f",
+        "type": "csv",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 1230,
+        "y": 300,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "da670e4fbe646d20",
+        "type": "file",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1380,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a14862ce26bbf5e4",
+        "type": "comment",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "info": "",
+        "x": 180,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3a6b92b262d28fe6",
+        "type": "serial request",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "serial": "fcc1443563760172",
+        "x": 640,
+        "y": 880,
+        "wires": [
+            [
+                "80cae698366a815b"
+            ]
+        ]
+    },
+    {
+        "id": "80cae698366a815b",
+        "type": "function",
+        "z": "d75ec33adae19baa",
+        "name": "function 8",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 640,
+        "wires": [
+            [
+                "ef9f3f65ce79591d"
+            ]
+        ]
+    },
+    {
+        "id": "ef9f3f65ce79591d",
+        "type": "mqtt out",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "topic": "/dev/ttyUSB6/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 1400,
+        "y": 740,
+        "wires": []
     }
 ]
