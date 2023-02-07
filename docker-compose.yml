@@ -14,7 +14,7 @@ services:
             - /etc/timezone:/etc/timezone:ro
         container_name: mynodered
         restart: always
-        network_mode: host
+        #network_mode: host
         privileged: true
         group_add:
           - dialout

@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "31b0a4aac983590c",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b6c8d41587f98e9e",
         "type": "postgreSQLConfig",
         "name": "",
@@ -185,6 +193,25 @@
         "responsetimeout": "2000"
     },
     {
+        "id": "c87a161f622b4eaa",
+        "type": "serial-port",
+        "serialport": "/dev/ttyS10",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": "10000"
+    },
+    {
         "id": "891387ab6602d92d",
         "type": "mqtt out",
         "z": "d75ec33adae19baa",
@@ -225,7 +252,7 @@
         "type": "debug",
         "z": "d75ec33adae19baa",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -403,7 +430,7 @@
         "type": "debug",
         "z": "d75ec33adae19baa",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -705,5 +732,186 @@
         "x": 1400,
         "y": 740,
         "wires": []
+    },
+    {
+        "id": "d85c172fde91d808",
+        "type": "inject",
+        "z": "31b0a4aac983590c",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "b'RF8 S\\r\\n'",
+        "payloadType": "str",
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "63f71a2a632eae8e"
+            ]
+        ]
+    },
+    {
+        "id": "63f71a2a632eae8e",
+        "type": "function",
+        "z": "31b0a4aac983590c",
+        "name": "utf-8",
+        "func": "//var buf = Buffer.from(msg.payload,\"utf-8\");\nvar buf = Buffer.from(msg.payload);\nmsg.payload = buf;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 400,
+        "wires": [
+            [
+                "d3d7e9d5a817671a",
+                "415c9d45a5bf523c"
+            ]
+        ]
+    },
+    {
+        "id": "d3d7e9d5a817671a",
+        "type": "debug",
+        "z": "31b0a4aac983590c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "415c9d45a5bf523c",
+        "type": "serial out",
+        "z": "31b0a4aac983590c",
+        "name": "",
+        "serial": "8f24edc78b20860c",
+        "x": 660,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9afa997e8582b298",
+        "type": "serial in",
+        "z": "31b0a4aac983590c",
+        "name": "",
+        "serial": "c87a161f622b4eaa",
+        "x": 800,
+        "y": 480,
+        "wires": [
+            [
+                "d3d7e9d5a817671a"
+            ]
+        ]
+    },
+    {
+        "id": "f1dbfaa382928b49",
+        "type": "inject",
+        "z": "31b0a4aac983590c",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "b'RF8 S\\r\\n'",
+        "payloadType": "str",
+        "x": 390,
+        "y": 620,
+        "wires": [
+            [
+                "c6e585db174d65eb"
+            ]
+        ]
+    },
+    {
+        "id": "c6e585db174d65eb",
+        "type": "function",
+        "z": "31b0a4aac983590c",
+        "name": "ascii",
+        "func": "//var buf = Buffer.from(msg.payload,\"utf-8\");\nvar buf = Buffer.from(msg.payload, \"ascii\");\nmsg.payload = buf;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 620,
+        "wires": [
+            [
+                "88731b1b1ae5a499",
+                "067960a5d25ab604"
+            ]
+        ]
+    },
+    {
+        "id": "88731b1b1ae5a499",
+        "type": "debug",
+        "z": "31b0a4aac983590c",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "067960a5d25ab604",
+        "type": "serial out",
+        "z": "31b0a4aac983590c",
+        "name": "",
+        "serial": "c87a161f622b4eaa",
+        "x": 650,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "e48e2c69fb3f4109",
+        "type": "serial in",
+        "z": "31b0a4aac983590c",
+        "name": "",
+        "serial": "c87a161f622b4eaa",
+        "x": 800,
+        "y": 700,
+        "wires": [
+            [
+                "88731b1b1ae5a499"
+            ]
+        ]
     }
 ]

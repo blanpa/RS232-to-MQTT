@@ -15,6 +15,13 @@
             "tours": {
                 "welcome": "3.0.2"
             }
+        },
+        "debug": {
+            "filter": "filterSelected",
+            "filteredNodes": [
+                "3fa1a282d566dc73",
+                "0dbc3c7f92576450"
+            ]
         }
     }
 }
