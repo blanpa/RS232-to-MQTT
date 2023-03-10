@@ -187,8 +187,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 520,
+        "x": 1680,
+        "y": 420,
         "wires": []
     },
     {
@@ -205,8 +205,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 560,
+        "x": 1680,
+        "y": 460,
         "wires": []
     },
     {
@@ -222,8 +222,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 640,
+        "x": 640,
+        "y": 360,
         "wires": []
     },
     {
@@ -266,7 +266,7 @@
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 1530,
-        "y": 400,
+        "y": 360,
         "wires": [
             []
         ]
@@ -360,17 +360,17 @@
         "type": "function",
         "z": "d75ec33adae19baa",
         "name": "function 1",
-        "func": "let commands = {\n    \"partCounter\" : \"RF8 S\",\n    \"serialNumber\" : \"RF51\",\n    \"deviceType\" : \"RF59\",\n    \"speed\" : \"RF20\",\n    \"force\" : \"RF21\",\n    \"temperature\" : \"RF22\",\n}\n\nfor (let i in commands) {\n    var buf1 = Buffer.from(commands[i], \"utf-8\");\n    var buf2 = Buffer.from([0x0D, 0x0A]);\n\n    var arr = [buf1, buf2];\n    var buf = Buffer.concat(arr);\n    msg.payload = buf;\n    \n}\nreturn msg;",
+        "func": "let commands = {\n    \"serialNumber\" : \"RF51\",\n    \"deviceType\": \"RF59\",\n    \"partCounter\": \"RF8 S\",\n    \"speed\" : \"RF20\",\n    \"force\" : \"RF21\",\n    \"temperature\" : \"RF22\",\n}\n\nfor (let i in commands) {\n    var buf1 = Buffer.from(commands[i], \"utf-8\");\n    var buf2 = Buffer.from([0x0D, 0x0A]);\n\n    var arr = [buf1, buf2];\n    var buf = Buffer.concat(arr);\n    msg.payload = buf;\n    node.send(msg);\n   \n    \n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 440,
-        "y": 340,
+        "y": 220,
         "wires": [
             [
-                "3fa1a282d566dc73"
+                "9211af18ddf963d7"
             ]
         ]
     },
@@ -525,8 +525,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 600,
+        "x": 1680,
+        "y": 500,
         "wires": []
     },
     {
@@ -543,8 +543,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 640,
+        "x": 1680,
+        "y": 540,
         "wires": []
     },
     {
@@ -561,8 +561,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 680,
+        "x": 1680,
+        "y": 580,
         "wires": []
     },
     {
@@ -579,8 +579,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 720,
+        "x": 1680,
+        "y": 620,
         "wires": []
     },
     {
@@ -598,7 +598,7 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 1310,
+        "x": 1330,
         "y": 320,
         "wires": [
             []
@@ -616,7 +616,7 @@
         "overwriteFile": "false",
         "encoding": "none",
         "x": 1540,
-        "y": 460,
+        "y": 320,
         "wires": [
             []
         ]
@@ -678,8 +678,8 @@
         "correl": "",
         "expiry": "",
         "broker": "",
-        "x": 1560,
-        "y": 760,
+        "x": 1680,
+        "y": 660,
         "wires": []
     },
     {
@@ -693,7 +693,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 420,
         "wires": [
             [
@@ -712,7 +712,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 460,
         "wires": [
             [
@@ -731,7 +731,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 500,
         "wires": [
             [
@@ -750,7 +750,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 540,
         "wires": [
             [
@@ -769,7 +769,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 580,
         "wires": [
             [
@@ -788,7 +788,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 620,
         "wires": [
             [
@@ -807,7 +807,7 @@
         "interval": 10,
         "allowEmptySequence": false,
         "topics": [],
-        "x": 830,
+        "x": 850,
         "y": 660,
         "wires": [
             [
@@ -820,11 +820,11 @@
         "type": "delay",
         "z": "d75ec33adae19baa",
         "name": "",
-        "pauseType": "delay",
+        "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
-        "nbRateUnits": "1",
+        "nbRateUnits": "5",
         "rateUnits": "second",
         "randomFirst": "1",
         "randomLast": "5",
@@ -832,8 +832,31 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 180,
-        "y": 760,
+        "x": 320,
+        "y": 420,
+        "wires": [
+            [
+                "3fa1a282d566dc73",
+                "9bba7b15040c726c",
+                "ba3e96ea04319b23",
+                "b9a96e30a9c45b42",
+                "5a2d4bb631dfb0ab",
+                "cd09b0ce988bc599",
+                "65a0bdc385127b83",
+                "3a6b92b262d28fe6"
+            ]
+        ]
+    },
+    {
+        "id": "3395cc8858436273",
+        "type": "json",
+        "z": "d75ec33adae19baa",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1330,
+        "y": 380,
         "wires": [
             []
         ]
